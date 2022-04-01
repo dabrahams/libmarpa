@@ -592,7 +592,7 @@ of a higher level interface, such as
 @code{Marpa::R2},
 or @code{Marpa::R3},
 or from Marpa's
-@uref{https://docs.google.com/file/d/0B9_mR_M2zOc4Ni1zSW5IYzk3TGc/edit?usp=sharing, theory document}.
+@uref{https://arxiv.org/abs/1910.08129, theory document}.
 
 As a reminder,
 in Libmarpa a location is called a @dfn{earleme}.
@@ -2757,9 +2757,8 @@ successful parse cannot be extended.
 
 An exhausted parse may cause a failure,
 in which case
-@code{marpa_r_earleme_complete()} returns an
-error
-whose error code is @code{MARPA_ERR_PARSE_EXHAUSTED}.
+@code{marpa_r_earleme_complete()} returns failure
+and sets the error code to @code{MARPA_ERR_PARSE_EXHAUSTED}.
 For a parse to fail at an earleme due to exhaustion,
 it must be the case that no alternatives were
 accepted at that earleme.
